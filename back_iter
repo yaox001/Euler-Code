@@ -1,0 +1,8 @@
+x=12
+iteratorlist=[]
+for n in range (2,x):
+    iteratorlist.append(n)
+print iteratorlist
+iteratorlist=iteratorlist[::-1]
+print iteratorlist
+    

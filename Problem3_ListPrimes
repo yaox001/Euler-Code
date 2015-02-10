@@ -1,0 +1,44 @@
+                       
+
+
+"""The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?"""
+
+def isPrime(a):
+    if a==1 or a==2:
+        return True
+    elif a<=0:
+        return False
+    else:
+        k=2
+        while k<=a:
+                if k<a and a%k==0:
+                        return False
+                        break
+                elif k<a:
+                        k=k+1
+                else:
+                        return True
+def lgprime(x):
+    
+    largestprime=x
+    iteratorlist=[]
+    for n in range (2,x):
+        iteratorlist.append(n)
+    reversedlist=iteratorlist[::-1]
+    for i in reversedlist:
+        m=x
+        while m>=2:
+            if m<x:
+                if m%i==0:
+                    m=m/i
+                    if isPrime(m)==True:
+                        largestprime=m
+                        print largestprime
+                        break
+                    else:
+                        lgprime(m)
+                
+
+lgprime(15)

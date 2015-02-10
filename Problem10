@@ -1,0 +1,26 @@
+def isPrime(a):
+    if a==2:
+        return True
+    elif a<=1:
+        return False
+    else:
+        k=2
+        while k<=a:
+                if k<a and a%k==0:
+                        return False
+                        break
+                elif k<a:
+                        k=k+1
+                else:
+                        return True
+
+k=2*(10**6)
+k=k-1
+total=2
+while k >2:
+	if isPrime(k)==True:
+		total=total+k
+		k=k-2
+	else:
+		k=k-2
+print total
